@@ -86,6 +86,7 @@ const getHistory = async (req, res) => {
     { user_id: req.connectedUserId },
     "foods"
   );
+  console.log(displayAllFoodFromDB);
   res.render("../views/history.ejs", {
     displayAllFoodFromDB: displayAllFoodFromDB.reverse(),
     connectedUser: req.connectedUser,
